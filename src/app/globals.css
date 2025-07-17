@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-feature-settings: "ss01", "cv01", "liga" off;
+  letter-spacing: 0.01em;
+  @apply text-foreground;
+}
+
+@layer base {
+  :root {
+    --background: 60 45% 95%;              /* #FFFCE3 - buttercream */
+    --foreground: 30 5% 20%;              /* dark warm brown */
+  
+    --card: 48 70% 97%;                    /* creamy base */
+    --card-foreground: 30 15% 20%;
+  
+    --popover: 48 70% 97%;
+    --popover-foreground: 30 15% 20%;
+  
+    --primary: 32 54% 62%;                 /* #D6A773 - sand */
+    --primary-foreground: 52 85% 95%;
+  
+    --secondary: 72 35% 80%;               /* #CBD5AE - sage green */
+    --secondary-foreground: 30 20% 25%;
+  
+    --muted: 70 30% 85%;                   /* light mossy tint */
+    --muted-foreground: 30 20% 30%;
+  
+    --accent: 48 50% 88%;                  /* off-white cream */
+    --accent-foreground: 30 20% 30%;
+  
+    --destructive: 5 60% 55%;              /* soft clay red */
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 42 30% 85%;
+    --input: 42 30% 85%;
+    --ring: 32 54% 62%;                    /* matches primary */
+  
+    --chart-1: 72 35% 80%;                 /* sage */
+    --chart-2: 48 70% 97%;                 /* cream */
+    --chart-3: 32 54% 62%;                 /* sand */
+    --chart-4: 52 85% 95%;                 /* buttercream */
+    --chart-5: 30 15% 20%;                 /* warm text brown */
+  
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 246 30% 10%;            /* #1A1830 - deep navy */
+    --foreground: 20 20% 90%;             /* soft beige text */
+  
+    --card: 246 25% 12%;                  /* darker indigo */
+    --card-foreground: 20 20% 90%;
+  
+    --popover: 246 25% 12%;
+    --popover-foreground: 20 20% 90%;
+  
+    --primary: 330 10% 70%;               /* #C4A8A2 - Rosy Taupe */
+    --primary-foreground: 246 30% 10%;    /* Deep navy for contrast */
+  
+    --secondary: 270 10% 60%;             /* #8F8093 - Muted mauve */
+    --secondary-foreground: 20 20% 90%;
+  
+    --muted: 248 10% 35%;                 /* #444662 - Slate Indigo */
+    --muted-foreground: 20 20% 70%;
+  
+    --accent: 30 30% 95%;                 /* #F7EEEB - Porcelain */
+    --accent-foreground: 246 30% 15%;
+  
+    --destructive: 0 60% 45%;             /* Muted red */
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 248 10% 20%;
+    --input: 248 10% 20%;
+    --ring: 330 10% 70%;                  /* Matches primary */
+  
+    --chart-1: 270 10% 60%;               /* Muted mauve */
+    --chart-2: 330 10% 70%;               /* Rosy taupe */
+    --chart-3: 248 10% 35%;               /* Slate indigo */
+    --chart-4: 20 20% 90%;                /* Pale text */
+    --chart-5: 30 30% 95%;                /* Porcelain */
+  
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* React Quill Editor Styles */
+.ql-toolbar {
+    @apply rounded-t-lg border-input bg-card;
+}
+.ql-container {
+    @apply rounded-b-lg border-input bg-card text-card-foreground;
+    min-height: 250px;
+    font-size: 1rem;
+}
+.dark .ql-toolbar {
+    @apply bg-background border-border;
+}
+.dark .ql-container {
+    @apply bg-background border-border text-foreground;
+}
+.dark .ql-snow .ql-stroke {
+    @apply stroke-primary-foreground;
+}
+.dark .ql-snow .ql-picker-label {
+    @apply text-primary-foreground;
+}
+.dark .ql-snow .ql-fill {
+    @apply fill-primary-foreground;
+}
