@@ -21,19 +21,9 @@ StudyForge is a modern, all-in-one platform designed to support and streamline y
 -   **Database**: MongoDB
 -   **Authentication**: JWT-based sessions
 
-## Getting Started
 
-To run the project locally:
-
-1.  Install dependencies:
-    ```bash
-    npm install
-    ```
-2.  Start the development server:
-    ```bash
-    npm run dev
-    ```
-3.  Open [http://localhost:9002](http://localhost:9002) in your browser.
+## Live Server
+🌐 : https://studyforge-rm.vercel.app/
 
 ## File Structure
 
@@ -66,3 +56,17 @@ Here is an overview of the project structure:
 ├── public/                       # Static assets
 └── ...                           # Configuration files
 ```
+
+## Getting Started
+
+To run the project locally:
+
+1.  Install dependencies:
+    ```bash
+    npm install
+    ```
+2.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+3.  Open [http://localhost:9002](http://localhost:9002) in your browser.

@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Notebook, CheckSquare, BarChart, Timer, BrainCircuit } from 'lucide-react';
+import { Notebook, CheckSquare, BarChart, Timer, BrainCircuit, GraduationCap } from 'lucide-react';
 
 const tabs = [
     { href: '/study-zone/notes', label: 'Notes', icon: Notebook },
@@ -36,6 +36,20 @@ export function StudyZoneTabs() {
             </Link>
             );
         })}
+        <footer className="border-t py-4 bg-background mt-auto">
+            <div className="container px-4 md:px-6">
+                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+                    <div className="flex items-center gap-2">
+                        <GraduationCap className="h-5 w-5 text-primary" />
+                        <span className="font-semibold">StudyForge</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                        © {new Date().getFullYear()} StudyForge. Built by Md Rizwan Molla.
+                        All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
         </div>
     </div>
   );
