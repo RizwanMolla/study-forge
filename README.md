@@ -1,6 +1,6 @@
 # StudyForge: AI-Powered Personal Study Assistant
 
-StudyForge is an all-in-one platform designed to elevate your learning experience. Built with Next.js, React, and Genkit, it combines essential study tools with cutting-edge AI to help you study smarter, not harder. From smart note-taking to AI-powered summaries, StudyForge provides everything you need to organize your studies, boost your focus, and track your progress.
+StudyForge is a modern, all-in-one platform designed to support and streamline your academic journey. Built with Next.js, React, and Genkit, it integrates essential tools to help you stay organized, maintain focus, and track your progress. With features like note-taking, Pomodoro timers, task management, and summarization, StudyForge is crafted for students who want a more structured and productive study experience.
 
 ## Core Features
 

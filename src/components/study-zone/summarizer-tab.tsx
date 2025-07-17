@@ -10,6 +10,7 @@ import { runSummarizeNote, runSummarizeDocument } from '@/lib/actions/ai.actions
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Input } from '../ui/input';
 import Link from 'next/link';
+import { Cursor } from 'mongoose';
 
 const fileToDataUri = (file: File) => new Promise<string>((resolve, reject) => {
     const reader = new FileReader();
@@ -104,7 +105,14 @@ export function SummarizerTab() {
                     </TabsContent>
                     <TabsContent value="pdf" className="mt-4">
                         <form onSubmit={handleFileSubmit} className="space-y-4">
-                            <Input id="pdf-file" name="pdf-file" type="file" accept=".pdf" required />
+                            <Input
+                                id="pdf-file"
+                                name="pdf-file"
+                                type="file"
+                                accept=".pdf"
+                                required
+                                className="cursor-pointer"
+                            />
                             <Button type="submit" disabled={isPending} className="w-full">
                                 <Upload className="mr-2 h-4 w-4" />
                                 {isPending ? 'Summarizing...' : 'Summarize PDF'}
