@@ -10,7 +10,6 @@ import { runSummarizeNote, runSummarizeDocument } from '@/lib/actions/ai.actions
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Input } from '../ui/input';
 import Link from 'next/link';
-import { Cursor } from 'mongoose';
 
 const fileToDataUri = (file: File) => new Promise<string>((resolve, reject) => {
     const reader = new FileReader();

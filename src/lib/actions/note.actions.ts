@@ -5,6 +5,7 @@ import dbConnect from '../db';
 import Note from '../models/note.model';
 import User from '../models/user.model';
 import { verifySession } from '../session';
+import { recordNoteCreatedActivity } from './analytics.actions';
 import { z } from 'zod';
 import { redirect } from 'next/navigation';
 
@@ -25,6 +26,7 @@ export async function createNote() {
   });
 
   await User.findByIdAndUpdate(userId, { $inc: { notesCreated: 1 } });
+  await recordNoteCreatedActivity();
   
   revalidatePath('/study-zone/notes');
   revalidatePath('/study-zone/analytics');

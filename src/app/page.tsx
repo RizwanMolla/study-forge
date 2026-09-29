@@ -1,10 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckSquare, GraduationCap, BrainCircuit, BarChart, CheckCircle, Notebook, Timer } from 'lucide-react';
+import { CheckSquare, GraduationCap, Brain, BrainCircuit, BarChart, CheckCircle, Notebook, Timer } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const features = [
+	{
+		icon: <Brain className="h-8 w-8 text-primary" />,
+		title: 'Spaced Repetition Flashcards',
+		description:
+			'Master difficult concepts permanently using the proven SuperMemo SM-2 memory retention algorithm with adaptive review intervals.',
+	},
 	{
 		icon: <Notebook className="h-8 w-8 text-primary" />,
 		title: 'Smart Note-Taking',

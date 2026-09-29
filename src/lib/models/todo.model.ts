@@ -2,15 +2,15 @@ import mongoose, { Document, Schema } from 'mongoose';
 
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-export interface ITodo extends Document {
+export interface ITodo {
   _id: string;
   title: string;
   completed: boolean;
   type: 'todo' | 'weekly';
   dayOfWeek?: 'Sunday' | 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday';
-  userId: mongoose.Schema.Types.ObjectId;
-  createdAt: Date;
-  updatedAt: Date;
+  userId: mongoose.Types.ObjectId | string;
+  createdAt?: Date | string;
+  updatedAt?: Date | string;
 }
 
 const TodoSchema = new Schema<ITodo>(

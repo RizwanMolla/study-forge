@@ -43,3 +43,8 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# diagnostic and local tooling
+audit.json
+.modified
+.idx/

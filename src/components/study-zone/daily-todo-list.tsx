@@ -36,14 +36,9 @@ export function DailyTodoList({ initialTodos }: { initialTodos: ITodo[] }) {
       try {
         await toggleTodo(id, completed);
         setTodos((prev) =>
-          prev.map((todo) => {
-            if (todo._id === id) {
-              // Directly mutate the completed property instead of spreading
-              todo.completed = !todo.completed;
-              return todo;
-            }
-            return todo;
-          })
+          prev.map((todo) =>
+            todo._id === id ? { ...todo, completed: !todo.completed } : todo
+          )
         );
       } catch (error) {
         toast({ title: 'Error', description: 'Failed to update to-do.', variant: 'destructive' });
